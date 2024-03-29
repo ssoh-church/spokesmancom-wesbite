@@ -12,7 +12,7 @@ import "../../css/slicknav.min.css";
 import "../../css/css-animation.min.css";
 import "../../css/nivo-slider.css";
 import "../../css/main.css";
-import "../../css/responsive.css";
+import "../../css/responsive.css"; 
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
