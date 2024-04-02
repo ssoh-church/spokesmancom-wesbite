@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
-
 import "./iconfonts.css";
+import "./globals.css";
 import "../../css/font-awesome.min.css";
 import "../../css/themify-icons.css";
 import "../../css/elegant-font-icons.css";

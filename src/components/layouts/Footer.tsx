@@ -1,6 +1,9 @@
 // components/Footer.tsx
+import SocialIcons from './SocialIcons';
+import data from '../../data/layouts.json';
 
 const Footer: React.FC = () => {
+    const {socialIcons} = data
     return (
         <>
             <section className="widget-section padding">
@@ -10,13 +13,7 @@ const Footer: React.FC = () => {
                             <div className="widget-content">
                                 <img src="img/meta/spokesmanlogowhite.png" alt="logo" style={{ width: "204px" }} />
                                 <p>The secret to happiness lies in helping others. Never underestimate the difference YOU can make in the lives of the poor</p>
-                                <ul className="social-icon">
-                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-pinterest"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-                                </ul>
+                                <SocialIcons ulClassName="social-icon" socialIcons={socialIcons} />
                             </div>
                         </div>
                         <div className="col-md-4 xs-padding">
