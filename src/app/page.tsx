@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroGrid from '@/components/grids/HeroGrid';
+import PromoSection from "@/components/grids/PromoSection";
 
 export default function Home() {
   const sliderData = [
@@ -23,7 +24,11 @@ export default function Home() {
     }
   ];
   return (
+    <div>
       <HeroGrid data={sliderData} />
+      <PromoSection />
+    </div>
+      
       
   );
 }
