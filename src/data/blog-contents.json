@@ -1,0 +1,29 @@
+{
+    "ministryArm": {
+        "gepi": {
+            "content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only centuries, but also the electronic more typesetting, remaining essentially unchanged.Nullam id dolor ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.This time is more Cras justo dapibus ac facilisis not only centuriemen, business type but also the in typesetting industry.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Nullam id dolor ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>"
+        },
+        "accf": {
+            "content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only centuries, but also the electronic more typesetting, remaining essentially unchanged.Nullam id dolor ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.This time is more Cras justo dapibus ac facilisis not only centuriemen, business type but also the in typesetting industry.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Nullam id dolor ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>",
+            "shareLinks": [
+                { "platform": "Facebook", "url": "https://web.facebook.com/accfNG/", "iconClass": "ti-facebook", "class": "facebook-brand"},
+                { "platform": "Visit website", "url": "http://chestcarefoundation.org/", "iconClass": "ti-world", "class": "website-brand" }
+              ]
+
+        },
+        "ssoh": {
+            "content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only centuries, but also the electronic more typesetting, remaining essentially unchanged.Nullam id dolor ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.This time is more Cras justo dapibus ac facilisis not only centuriemen, business type but also the in typesetting industry.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Nullam id dolor ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>",
+              "shareLinks": [
+                { "platform": "Facebook", "url": "https://www.facebook.com/sanctuaryofhopechurch", "iconClass": "ti-facebook", "class": "facebook-brand"},
+                { "platform": "Twitter", "url": "https://twitter.com/spokesmancom", "iconClass": "ti-twitter", "class": "twitter-brand" },
+                { "platform": "Instagram", "url": "https://www.instagram.com/sanctuaryofhopechurch/", "iconClass": "ti-instagram", "class": "instagram-brand" },
+                { "platform": "Visit website", "url": "https://ssoh.spokesmancom.org/", "iconClass": "ti-world", "class": "website-brand" }
+              ]
+
+        },
+        "medicare": {
+            "content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only centuries, but also the electronic more typesetting, remaining essentially unchanged.Nullam id dolor ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.This time is more Cras justo dapibus ac facilisis not only centuriemen, business type but also the in typesetting industry.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Nullam id dolor ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>"            
+
+        }
+    }
+}

@@ -1,32 +1,25 @@
-import Image from "next/image";
+import AboutSection from '@/components/grids/AboutSection';
+import CampaignsSection from '@/components/grids/CampaignSection';
+import CounterSection from '@/components/grids/CounterSection';
+import EventSection from '@/components/grids/EventSection';
 import HeroGrid from '@/components/grids/HeroGrid';
+import MinistryArm from '@/components/grids/MinistryArm';
 import PromoSection from "@/components/grids/PromoSection";
+import TestimonialSection from '@/components/grids/TestimonialSection';
+import data from "@/data/basic-data.json"
 
 export default function Home() {
-  const sliderData = [
-    {
-      imageUrl: 'img/slider-1.jpg',
-      title: 'We are dealers in Hope',
-      subtitle: 'Connect with Us today',
-      description: "Don't make a case against yourself because God will not make a case against you."
-    },
-    {
-      imageUrl: 'img/slider-2.jpg',
-      title: 'We are called to',
-      subtitle: 'Connect with Us today',
-      description: 'communicate divine truth with an accent of love and bring hope to our generation.'
-    },
-    {
-      imageUrl: 'img/slider-3.jpg',
-      title: 'We are committed to',
-      subtitle: 'Connect with Us Today',
-      description: 'the pursuit of excellence in all that pertains to life and Godliness through the agency of God\'s Word and the Holy Spirit.'
-    }
-  ];
+  const {sliderData} = data
+  const {ministryArms} = data
+  const {eventData} = data
   return (
     <div>
       <HeroGrid data={sliderData} />
       <PromoSection />
+      <MinistryArm  data={ministryArms}/>
+      <AboutSection />
+      <CampaignsSection />
+      <EventSection eventData={eventData} limit={3}/>
     </div>
       
       

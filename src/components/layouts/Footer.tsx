@@ -3,7 +3,7 @@ import SocialIcons from './SocialIcons';
 import data from '../../data/layouts.json';
 
 const Footer: React.FC = () => {
-    const {socialIcons} = data
+    const {socialIcons, menuItems} = data
     return (
         <>
             <section className="widget-section padding">
@@ -11,19 +11,18 @@ const Footer: React.FC = () => {
                     <div className="widget-wrap row">
                         <div className="col-md-4 xs-padding">
                             <div className="widget-content">
-                                <img src="img/meta/spokesmanlogowhite.png" alt="logo" style={{ width: "204px" }} />
-                                <p>The secret to happiness lies in helping others. Never underestimate the difference YOU can make in the lives of the poor</p>
+                                <img src="/img/meta/scm_WHITE.png" width={100} height={100} alt="logo" />
+                                <p>We are dealers in hope</p>
                                 <SocialIcons ulClassName="social-icon" socialIcons={socialIcons} />
                             </div>
                         </div>
                         <div className="col-md-4 xs-padding">
                             <div className="widget-content">
-                                <h3>Recent Campaigns</h3>
+                                <h3>Resources</h3>
                                 <ul className="widget-link">
-                                    <li><a href="#">First charity activity of this summer. <span>-1 Year Ago</span></a></li>
-                                    <li><a href="#">Big charity: build school for poor children. <span>-2 Year Ago</span></a></li>
-                                    <li><a href="#">Clean-water system for rural poor. <span>-2 Year Ago</span></a></li>
-                                    <li><a href="#">Nepal earthquake donation campaigns. <span>-3 Year Ago</span></a></li>
+                                    {menuItems[3].subMenu?.map((item, index) => (
+                                        <li key={index}><a href={item.link} target='_blank'>{item.label}</a></li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
@@ -32,7 +31,7 @@ const Footer: React.FC = () => {
                                 <h3>Spokesman Communication Ministries Location</h3>
                                 <ul className="address">
                                     <li><i className="ti-email"></i> info@gregerhabor.com</li>
-                                    <li><i className="ti-mobile"></i> +(333) 052 39876</li>
+                                    {/* <li><i className="ti-mobile"></i> +(333) 052 39876</li> */}
                                     <li><i className="ti-world"></i> www.spokesmancom.org</li>
                                     <li><i className="ti-location-pin mx-1"></i> 60 Grand Avenue. Central New Road 0708, USA</li>
                                 </ul>
@@ -45,15 +44,15 @@ const Footer: React.FC = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 sm-padding">
-                            <div className="copyright">&copy; 2021 Spokesman Communication Ministries Powered by DynamicLayers</div>
+                            <div className="copyright">&copy; 2021 Spokesman Communication Ministries</div>
                         </div>
-                        <div className="col-md-6 sm-padding">
+                        {/* <div className="col-md-6 sm-padding">
                             <ul className="footer-social">
                                 <li><a href="#">Orders</a></li>
                                 <li><a href="#">Terms</a></li>
                                 <li><a href="#">Report Problem</a></li>
                             </ul>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </footer>

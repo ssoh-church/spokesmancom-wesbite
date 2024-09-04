@@ -14,7 +14,7 @@ const BottomHeader: React.FC = () => {
                 <div className="bottom-content-wrap row">
                     <div className="col-sm-4">
                         <div className="site-branding">
-                            <a href="index.html"><img src="/img/meta/spokesmanlogo.png" alt="Brand" /></a>
+                            <a href="/"><img src="/img/meta/spokesmanlogo.png" alt="Spokesman logo" /></a>
                         </div>
                     </div>
                     <div className="col-sm-8 text-right">

@@ -1,31 +1,22 @@
 
 {
     "socialIcons": [
-        { "iconClass": "fa fa-facebook", "link": "#" },
-        { "iconClass": "fa fa-twitter", "link": "#" },
-        { "iconClass": "fa fa-pinterest", "link": "#" },
-        { "iconClass": "fa fa-instagram", "link": "#" },
-        { "iconClass": "fa fa-linkedin", "link": "#" }
+        { "iconClass": "fa fa-facebook", "link": "https://www.facebook.com/sanctuaryofhopechurch" },
+        { "iconClass": "fa fa-twitter", "link": "https://twitter.com/spokesmancom" },
+        { "iconClass": "fa fa-pinterest", "link": "https://www.pinterest.com/gregerhabor/" },
+        { "iconClass": "fa fa-instagram", "link": "https://www.instagram.com/sanctuaryofhopechurch/" },
+        { "iconClass": "fa fa-youtube", "link": "https://www.youtube.com/@SanctuaryofHopeChurch" },
+        { "iconClass": "fa fa-telegram", "link": "https://t.me/spokesmancom" }
     ],
 
     "menuItems": [
         {
             "label": "About",
-            "link": "about.html"
+            "link": "/about"
         },
         {
-            "label": "Activities",
-            "link": "#",
-            "subMenu": [
-                {
-                    "label": "Events",
-                    "link": "causes.html"
-                },
-                {
-                    "label": "Projects",
-                    "link": "causes.html"
-                }
-            ]
+            "label": "Events",
+            "link": "/events"
         },
         {
             "label": "Ministries",
@@ -33,19 +24,23 @@
             "subMenu": [
                 {
                     "label": "SSOH(Church)",
-                    "link": "gallery.html"
+                    "link": "/ssoh"
                 },
                 {
                     "label": "GEPI",
-                    "link": "gallery.html"
+                    "link": "/gepi"
                 },
                 {
                     "label": "ACCF",
-                    "link": "team.html"
+                    "link": "/accf"
                 },
                 {
                     "label": "GEMI",
-                    "link": "404.html"
+                    "link": "/gemi"
+                },
+                {
+                    "label": "Medicare",
+                    "link": "/medicare"
                 }
             ]
         },
@@ -55,32 +50,21 @@
             "subMenu": [
                 {
                     "label": "Videos",
-                    "link": "blog-grid.html"
-                },
-                {
-                    "label": "Skits",
-                    "link": "blog-grid.html"
-                },
-                {
-                    "label": "MP3 Messages",
-                    "link": "blog-grid.html"
+                    "link": "/videos"
                 },
                 {
                     "label": "Inspirational Messages",
-                    "link": "blog-grid.html"
+                    "link": "https://t.me/spokesmancom"
                 },
                 {
                     "label": "Books",
-                    "link": "blog-grid.html"
+                    "link": "https://www.amazon.com/stores/Gregory-Erhabor/author/B00JI2QYD8"
                 },
                 {
                     "label": "iHope",
-                    "link": "blog-grid.html"
-                },
-                {
-                    "label": "Blog",
-                    "link": "blog-grid.html"
+                    "link": "https://www.instagram.com/gregerhabor"
                 }
+                
             ]
         }
     ]

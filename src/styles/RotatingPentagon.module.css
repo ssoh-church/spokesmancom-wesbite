@@ -1,0 +1,40 @@
+/* styles/RotatingPentagon.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    
+  }
+  
+  .pentagon {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    
+    animation: rotate 5s linear infinite;
+  }
+  
+  .link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  .link:nth-child(1) { transform: rotate(72deg) translateY(-90px); }
+  .link:nth-child(2) { transform: rotate(144deg) translateY(-90px); }
+  .link:nth-child(3) { transform: rotate(216deg) translateY(-90px); }
+  .link:nth-child(4) { transform: rotate(288deg) translateY(-90px); }
+  .link:nth-child(5) { transform: rotate(360deg) translateY(-90px); }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

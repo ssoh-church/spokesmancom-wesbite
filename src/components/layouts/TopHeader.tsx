@@ -10,7 +10,7 @@ const TopHeader: React.FC = () => {
                     <div className="col-sm-8">
                         <ul className="left-info">
                             <li><a href="#"><i className="ti-email"></i>info@gregerhabor.com</a></li>
-                            <li><a href="#"><i className="ti-mobile"></i>+(333) 052 39876</a></li>
+                            {/* <li><a href="#"><i className="ti-mobile"></i>+(333) 052 39876</a></li> */}
                         </ul>
                     </div>
                     <div className="col-sm-4 d-none d-md-block">

@@ -16,7 +16,7 @@ const SocialIcons: FC<SocialIconsProps> = ({ ulClassName, socialIcons }) => {
         <ul className={ulClassName}>
             {socialIcons.map((icon, index) => (
                 <li key={index}>
-                    <a href={icon.link}><i className={icon.iconClass}></i></a>
+                    <a href={icon.link} target='_blank'><i className={icon.iconClass}></i></a>
                 </li>
             ))}
         </ul>

@@ -994,7 +994,7 @@
 
     .about-wrap {
         display: flex;
-        align-items: center;
+        align-items: start;
     }
 
     .about-wrap img {
@@ -1544,6 +1544,8 @@
         align-items: center;
     }
 
+    
+
     .pager-header h2 {
         color: #fff;
         font-size: 42px;
@@ -1836,23 +1838,47 @@
         margin-right: 5px;
     }
 
-    .share-icon li:nth-child(1) a {
-        background-color: #3B5998;
+    .share-icon li.facebook-brand a {
+        background-color: #1877f2;
     }
 
-    .share-icon li:nth-child(2) a {
-        background-color: #1DCAFF;
+    .share-icon li.twitter-brand a {
+        background-color: #1da1f2;
     }
 
-    .share-icon li:nth-child(3) a {
-        background-color: #DB4A39;
+    .share-icon li.youtube-brand a {
+        background-color: #ff0000;
     }
 
-    .share-icon li:nth-child(4) a {
+    .share-icon li.instagram-brand a {
         background-color: #e4405f;
     }
 
-    .share-icon li:nth-child(5) a {
+    .share-icon li.pinterest-brand a {
+        background-color: #bd081c;
+    }
+
+    .share-icon li.google-brand a {
+        background-color: #ff0000;
+    }
+
+    .share-icon li.whatsapp-brand a {
+        background-color: green;
+    }
+
+    .share-icon li.tiktok-brand a {
+        background-color: black;
+    }
+
+    .share-icon li.snapchat-brand a {
+        background-color: #fffc00;
+    }
+
+    .share-icon li.website-brand a {
+        background-color: #000;
+    }
+
+    .share-icon li.linkedin-brand a {
         background-color: #0077B5;
     }
 
@@ -2438,4 +2464,126 @@
     #scroll-to-top:hover {
         background-color: #ffb451;
         color: #fff;
+    }
+
+
+    .list-display li {
+        margin-bottom: .4rem;
+        font-size: 1.1rem;
+        padding-left: 1.5rem;
+    }
+
+    
+    .list-checkmarks li {
+        list-style-type: none;
+        padding-left: 1rem;
+    }
+
+    .list-checkmarks li:before {
+        font-family: 'FontAwesome';
+        content: "\f00c";
+        margin: 0 10px 0 -28px;
+        color: #17aa1c;
+    }
+
+
+    .airplane-list li {
+        background-image: url('../img/gifs/flying-airplane.gif'); /* Replace 'your-gif-url.gif' with the URL of your GIF */
+        background-repeat: no-repeat; /* Prevent the GIF from repeating */
+        background-size: 40px 40px;
+        padding-left: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 5px; /* Add some spacing between list items */
+        position: relative; /* Ensure the list item's text appears on top of the GIF */
+    }
+    
+    .airplane-list li::before {
+        content: ""; /* Required for pseudo-element */
+        display: block;
+        position: absolute; /* Position the pseudo-element relative to the list item */
+        top: 50%; /* Adjust as needed to center the GIF vertically */
+        left: 0; /* Align the GIF to the left */
+        transform: translateY(-50%); /* Center the GIF vertically */
+        width: 20px; /* Adjust width as needed */
+        height: 20px; /* Adjust height as needed */
+    }
+
+
+
+
+    .binocular-list li {
+        background-image: url('../img/gifs/binocular2.gif'); /* Replace 'your-gif-url.gif' with the URL of your GIF */
+        background-repeat: no-repeat; /* Prevent the GIF from repeating */
+        background-size: 40px 40px;
+        padding-left: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 5px; /* Add some spacing between list items */
+        position: relative; /* Ensure the list item's text appears on top of the GIF */
+    }
+    
+    .binocular-list li::before {
+        content: ""; /* Required for pseudo-element */
+        display: block;
+        position: absolute; /* Position the pseudo-element relative to the list item */
+        top: 50%; /* Adjust as needed to center the GIF vertically */
+        left: 0; /* Align the GIF to the left */
+        transform: translateY(-50%); /* Center the GIF vertically */
+        width: 20px; /* Adjust width as needed */
+        height: 20px; /* Adjust height as needed */
+    }
+
+    .vision-list li {
+        background-image: url('../img/gifs/vision2.gif'); /* Replace 'your-gif-url.gif' with the URL of your GIF */
+        background-repeat: no-repeat; /* Prevent the GIF from repeating */
+        background-size: 40px 40px;
+        padding-left: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 5px; /* Add some spacing between list items */
+        position: relative; /* Ensure the list item's text appears on top of the GIF */
+    }
+    
+    .vision-list li::before {
+        content: ""; /* Required for pseudo-element */
+        display: block;
+        position: absolute; /* Position the pseudo-element relative to the list item */
+        top: 50%; /* Adjust as needed to center the GIF vertically */
+        left: 0; /* Align the GIF to the left */
+        transform: translateY(-50%); /* Center the GIF vertically */
+        width: 20px; /* Adjust width as needed */
+        height: 20px; /* Adjust height as needed */
+    }
+
+    .spokesman-list li {
+        background-image: url('../img/gifs/spokesman.png'); /* Replace 'your-gif-url.gif' with the URL of your GIF */
+        background-repeat: no-repeat; /* Prevent the GIF from repeating */
+        background-size: 30px 30px;
+        padding-left: 50px;
+        /* padding-top: 10px; */
+        padding-bottom: 10px;
+        margin-bottom: 5px; /* Add some spacing between list items */
+        position: relative; /* Ensure the list item's text appears on top of the GIF */
+    }
+    
+    .spokesman-list li::before {
+        content: ""; /* Required for pseudo-element */
+        display: block;
+        position: absolute; /* Position the pseudo-element relative to the list item */
+        top: 50%; /* Adjust as needed to center the GIF vertically */
+        left: 0; /* Align the GIF to the left */
+        transform: translateY(-50%); /* Center the GIF vertically */
+        width: 20px; /* Adjust width as needed */
+        height: 20px; /* Adjust height as needed */
+    }
+
+    @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    .blink {
+        animation: blink 3s infinite;
     }

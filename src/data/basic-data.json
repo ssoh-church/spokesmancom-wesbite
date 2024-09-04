@@ -1,0 +1,218 @@
+{
+    "ministryArms": [
+        {
+            "imageSrc": "/img/ministries/ssoh.png",
+            "alt": "Spokesman Sanctuary of Hope Church",
+            "link": "https://ssoh.spokesmancom.org"
+        },
+        {
+            "imageSrc": "/img/ministries/accf.jpg",
+            "alt": "Asthma and Chest Care Foundation",
+            "link": "https://chestcarefoundation.org"
+        },
+        {
+            "imageSrc": "/img/ministries/ilcon.png",
+            "alt": "International Leadership Conference",
+            "link": "https://ilcon.spokesmancom.org"
+        },
+        {
+            "imageSrc": "/img/ministries/spokesman.png",
+            "alt": "Spokesman Communication Ministries",
+            "link": "https://spokesmancom.org"
+        },
+        {
+            "imageSrc": "/img/ministries/gbooks.png",
+            "alt": "Greg Erhabor Books",
+            "link": "https://ssoh.spokesmancom.org"
+        },
+        {
+            "imageSrc": "/img/ministries/gepi.png",
+            "alt": "Greg Erhabor Partners International",
+            "link": "https://ilcon.spokesmancom.org"
+        },
+        {
+            "imageSrc": "/img/ministries/iHope.jpg",
+            "alt": "Asthma and Chest Care Foundation",
+            "link": "https://ilcon.spokesmancom.org"
+        }
+    ],
+    "sliderData": [
+        {
+            "imageUrl": "/img/slider-1.jpg",
+            "title": "We are dealers in Hope",
+            "subtitle": "Connect with Us today",
+            "description": "Don't make a case against yourself because God will not make a case against you."
+        },
+        {
+            "imageUrl": "/img/slider-2.jpg",
+            "title": "We are called to",
+            "subtitle": "Connect with Us today",
+            "description": "communicate divine truth with an accent of love and bring hope to our generation."
+        },
+        {
+            "imageUrl": "/img/slider-3.jpg",
+            "title": "We are committed to",
+            "subtitle": "Connect with Us Today",
+            "description": "the pursuit of excellence in all that pertains to life and Godliness through the agency of God's Word and the Holy Spirit."
+        }
+    ],
+    "eventData": [
+        {
+            "title": "The History of Donation Told",
+            "imageSrc": "/img/home-blog-1.jpg",
+            "startedOn": "12:00 PM",
+            "location": "Grand Mahal, Dubai 2100",
+            "link": "#"
+        },
+        {
+            "title": "Help the Community",
+            "imageSrc": "/img/home-blog-2.jpg",
+            "startedOn": "12:00 PM",
+            "location": "Grand Mahal, Dubai 2100",
+            "link": "#"
+        },
+        {
+            "title": "Charity Ever Rule the World?",
+            "imageSrc": "/img/home-blog-3.jpg",
+            "startedOn": "12:00 PM",
+            "location": "Grand Mahal, Dubai 2100",
+            "link": "#"
+        }
+    ],
+    "videoList": [
+        {
+            "title": "The Role of a Godly Woman",
+            "imageSrc": "/img/videos/virtuos-wife.webp",
+            "staticSrc": "/img/videos/virtuos-wife-static.webp",
+            "link": "https://www.youtube.com/watch?v=9o9ySGlWcfE"
+        },
+        {
+            "title": "Why Should I Tithe",
+            "imageSrc": "/img/videos/why-should-i-tithe.webp",
+            "staticSrc": "/img/videos/why-should-i-tithe-static.webp",
+            "link": "https://www.youtube.com/watch?v=c5O1gUptcpY"
+        },
+        {
+            "title": "Hope: The Bible's Perspective",
+            "imageSrc": "/img/videos/hope-in-bible.webp",
+            "staticSrc": "/img/videos/hope-in-bible-static.webp",
+            "link": "https://www.youtube.com/watch?v=i0O8pfnAbPU&t=3s"
+        },
+        {
+            "title": "Great Visions",
+            "imageSrc": "/img/videos/great-visions.webp",
+            "staticSrc": "/img/videos/great-visions-static.webp",
+            "link": "https://www.youtube.com/watch?v=-DceaWk8esQ"
+        },
+        {
+            "title": "The Truth about Easter",
+            "imageSrc": "/img/videos/easter.webp",
+            "staticSrc": "/img/videos/easter-static.webp",
+            "link": "https://www.youtube.com/watch?v=pLi4EFE4G7k"
+        },
+        {
+            "title": "When the Lord breaks through for you",
+            "imageSrc": "/img/videos/breakthrough.webp",
+            "staticSrc": "/img/videos/breakthrough-static.webp",
+            "link": "https://www.youtube.com/watch?v=o6gHvlhQS_s"
+        },
+        {
+            "title": "You must be a Figher",
+            "imageSrc": "/img/videos/fighter.webp",
+            "staticSrc": "/img/videos/fighter-static.webp",
+            "link": "https://www.youtube.com/watch?v=EXuaLd_3ik8"
+        },
+        {
+            "title": "The Implanted Word of God",
+            "imageSrc": "/img/videos/implanted-word.webp",
+            "staticSrc": "/img/videos/implanted-word-static.webp",
+            "link": "https://www.youtube.com/watch?v=8DIX6kq0YG4"
+        },
+        {
+            "title": "God is Good",
+            "imageSrc": "/img/videos/God-is-good.webp",
+            "staticSrc": "/img/videos/God-is-good-static.webp",
+            "link": "https://www.youtube.com/watch?v=oUc7m5X0XY4"
+        }
+    ],
+    "resourcesData": [
+        {
+            "iconClass": "ti-book",
+            "count": 85389,
+            "label": "Books"
+        },
+        {
+            "iconClass": "ti-control-play",
+            "count": 10693,
+            "label": "Podcasts"
+        },
+        {
+            "iconClass": "ti-pin",
+            "count": 50177,
+            "label": "iHopes"
+        },
+        {
+            "iconClass": "ti-video-camera",
+            "count": 669,
+            "label": "Videos"
+        }
+    ],
+    "testimonialData": [
+        {
+            "text": "The secret to happiness lies in helping others. Never underestimate the difference YOU can make in the lives of the poor, the abused and the helpless.",
+            "profileImg": "/img/team-1.jpg",
+            "name": "Jonathan Smith",
+            "role": "Marketer"
+        },
+        {
+            "text": "The secret to happiness lies in helping others. Never underestimate the difference YOU can make in the lives of the poor, the abused and the helpless.",
+            "profileImg": "/img/team-2.jpg",
+            "name": "Angelina Rose",
+            "role": "Designer"
+        },
+        {
+            "text": "The secret to happiness lies in helping others. Never underestimate the difference YOU can make in the lives of the poor, the abused and the helpless.",
+            "profileImg": "/img/team-3.jpg",
+            "name": "Taylor Swift",
+            "role": "Developer"
+        },
+        {
+            "text": "The secret to happiness lies in helping others. Never underestimate the difference YOU can make in the lives of the poor, the abused and the helpless.",
+            "profileImg": "/img/team-4.jpg",
+            "name": "Michel Brown",
+            "role": "Programmer"
+        }
+    ],
+    "storyDetails": [
+        {
+            "imageSrc": "/img/ministries/red-question-mark.jpg",
+            "status": 0,
+            "description": "The Radio Ministry"
+        },
+        {
+            "imageSrc": "/img/ministries/red-question-mark.jpg",
+            "status": 0,
+            "description": "The House Fellowship"
+        },
+        {
+            "imageSrc": "/img/ministries/red-question-mark.jpg",
+            "status": 0,
+            "description": "Asthma and Chest Care Foundation"
+        },
+        {
+            "imageSrc": "/img/ministries/red-question-mark.jpg",
+            "status": 0,
+            "description": "International Leadership Conference"
+        },
+        {
+            "imageSrc": "/img/ministries/red-question-mark.jpg",
+            "status": 0,
+            "description": "Medicare"
+        },
+        {
+            "imageSrc": "/img/ministries/red-question-mark.jpg",
+            "status": 0,
+            "description": "iHope"
+        }
+    ]
+}
