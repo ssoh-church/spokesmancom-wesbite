@@ -1,25 +1,25 @@
-import AboutSection from '@/components/grids/AboutSection';
-import CampaignsSection from '@/components/grids/CampaignSection';
-import CounterSection from '@/components/grids/CounterSection';
-import EventSection from '@/components/grids/EventSection';
-import HeroGrid from '@/components/grids/HeroGrid';
-import MinistryArm from '@/components/grids/MinistryArm';
-import PromoSection from "@/components/grids/PromoSection";
-import TestimonialSection from '@/components/grids/TestimonialSection';
-import data from "@/data/basic-data.json"
+'use client'
+import React from 'react';
+import Orbit from '@/components/Orbit';
+import { link } from 'fs';
 
 export default function Home() {
-  const {sliderData} = data
-  const {ministryArms} = data
-  const {eventData} = data
+  const iconData = [
+    { src: '/img/ministries/ssoh.png', title: 'Spokesman Sanctuary of Hope Church' , link: 'https://google.com'},
+    { src: '/img/ministries/ilcon.png', title: 'International Leadership Conference', link: 'https://google.com' },
+    { src: '/img/ministries/accf.jpg', title: 'Asthma and Chest care foundation', link: 'https://google.com' },
+    { src: '/img/ministries/gepi.png', title: 'Greg Erhabor Partners International' , link: 'https://google.com'},
+    { src: '/img/ministries/iHope.jpg', title: 'iHope Repository' , link: 'https://google.com'},
+    { src: '/img/ministries/ssoh.png', title: 'Greg Erhabor Leadership Institute' , link: 'https://google.com'},
+    { src: '/img/ministries/ssoh.png', title: 'Spokesman Sanctuary of Hope Church' , link: 'https://google.com'},
+    { src: '/img/ministries/ilcon.png', title: 'International Leadership Conference', link: 'https://google.com' },
+    { src: '/img/ministries/accf.jpg', title: 'Asthma and Chest care foundation', link: 'https://google.com' },
+    { src: '/img/ministries/gepi.png', title: 'Greg Erhabor Partners International' , link: 'https://google.com'},
+  ];
+
   return (
     <div>
-      <HeroGrid data={sliderData} />
-      <PromoSection />
-      <MinistryArm  data={ministryArms}/>
-      <AboutSection />
-      <CampaignsSection />
-      <EventSection eventData={eventData} limit={3}/>
+      <Orbit items={iconData} />
     </div>
       
       
