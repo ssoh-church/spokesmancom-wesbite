@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import ScreenSizeContext from '@/utils/ScreenSizeContext';
 
 export interface Item {
   src: string;
@@ -22,41 +23,46 @@ const MovingOrbitWithFixedPosition: React.FC<MovingOrbitWithFixedPositionProps> 
   initialItems,
   backgroundImage,
 }) => {
+  const screenSize = useContext(ScreenSizeContext);
   const [items, setItems] = useState<Item[]>(initialItems);
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
-  const [windowHeight, setWindowHeight] = useState<number>(window.innerHeight);
   const [activeItem, setActiveItem] = useState<Item | null>(null);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-      setWindowHeight(window.innerHeight);
-    };
+  if (!screenSize) {
+    return null; // or handle this case as needed
+  }
 
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const centerSize = windowWidth < 768 ? 60 : 96; // Center size
-  const itemSize = windowWidth < 768 ? 40 : 180; // Item size
+  const centerSize = screenSize.width < 768 ? 60 : 96; // Center size
+  const itemSize = screenSize.width < 768 ? 40 : 180; // Item size
 
   useEffect(() => {
     const updateCenterPosition = () => {
-      const centerX = windowWidth / 2;
-      const centerY = windowHeight / 2;
+      const centerX = screenSize.width / 2;
+      const centerY = screenSize.height / 2;
       center[0] = centerX;
       center[1] = centerY;
     };
 
     updateCenterPosition();
-  }, [windowWidth, windowHeight, center]);
+  }, [screenSize.width, screenSize.height, center]);
 
   // Function to set positions in a polygonal layout for mobile screens
-  const calculatePositions = () => {
+  const reAdjustXPosition = () => {
     const angleStep = (2 * Math.PI) / items.length;
-    const radius = Math.min(windowWidth, windowHeight) / 3; // Adjust radius for layout
+    const radius = Math.min(screenSize.width, screenSize.height) / 3; // Adjust radius for layout
+
+    return items.map((item, index) => {
+      const angle = index * angleStep;
+      return {
+        ...item,
+        x: item.x? (item.x/1280*screenSize.width): center[0] + radius * Math.cos(angle) - itemSize / 2,
+        // y: item.y? (item.y/1280*screenSize.width): center[1] + radius * Math.cos(angle) - itemSize / 2,
+      };
+    });
+  };
+
+  const calculatePositions  = () => {
+    const angleStep = (2 * Math.PI) / items.length;
+    const radius = Math.min(screenSize.width, screenSize.height) / 3; // Adjust radius for layout
 
     return items.map((item, index) => {
       const angle = index * angleStep;
@@ -67,36 +73,25 @@ const MovingOrbitWithFixedPosition: React.FC<MovingOrbitWithFixedPositionProps> 
         size: itemSize, // Ensure size is set
       };
     });
-  };
+  }
 
  
 
-  const addItem = () => {
-    setItems((prevItems) => {
-      const newItem: Item = {
-        src: '/img/ministries/gepi.png',
-        title: 'Logo 3',
-        link: 'https://example.com',
-        size: itemSize,
-        x: 0, // Placeholder, will be updated
-        y: 0, // Placeholder, will be updated,
-        bgColor: 'white', // Default background color
-        borderColor: 'black', // Default border color
-      };
-      return [...prevItems, newItem];
-    });
-  };
-
   useEffect(() => {
-    if (windowWidth < 768) {
+    if (screenSize.width < 768) {
       const newItems = calculatePositions();
       setItems(newItems);
-    } 
-  }, [windowWidth, windowHeight]);
+    } else if (screenSize.width >= 768 && screenSize.width < 1920) {
+      // Update positions only if in range (768px to 1920px)
+      const newItems = reAdjustXPosition();
+      setItems(newItems);
+      
+    }
+  }, [screenSize.width, screenSize.height]);
 
   // Initial calculation of positions when the component mounts
   useEffect(() => {
-    if (windowWidth < 768) {
+    if (screenSize.width < 768) {
       const newItems = calculatePositions();
       setItems(newItems);
     }
@@ -106,12 +101,16 @@ const MovingOrbitWithFixedPosition: React.FC<MovingOrbitWithFixedPositionProps> 
     setActiveItem(item);
   };
 
-  const handleMouseLeave = () => {
-    setActiveItem(null);
+  const handleMouseLeave = (item: Item) => {
+    setTimeout(() => {
+      if (activeItem?.title === item?.title) {
+        setActiveItem(null);
+      }
+    }, 200); // Slight delay to allow for potential mouse re-enter
   };
 
   const handleClick = (item: Item) => {
-      setActiveItem(item);
+    setActiveItem(item);
   };
 
   const handleClose = () => {
@@ -143,47 +142,39 @@ const MovingOrbitWithFixedPosition: React.FC<MovingOrbitWithFixedPositionProps> 
               left: `${item.x || 0}px`,
               backgroundColor: item.bgColor || 'white',
               borderColor: item.borderColor || 'black',
-              borderWidth: '2px',
+              borderWidth: '10px',
               borderStyle: 'solid',
             }}
-            onMouseEnter={() => setActiveItem(item)}
-            onMouseLeave={() => setTimeout(() => setActiveItem(null), 200)}
+            onMouseEnter={() => handleMouseEnter(item)}
+            onMouseLeave={() => setTimeout(handleMouseLeave, 200)}
             onClick={() => handleClick(item)}
           >
-            
-              <img
-                src={item.src}
-                alt={item.title}
-                className="flex flex-col items-center justify-center w-full h-full w-3/4 h-3/4"
-              />
+            <img
+              src={item.src}
+              alt={item.title}
+              className="flex flex-col items-center justify-center rounded-full w-full h-full w-3/4 h-3/4"
+            />
           </div>
         ))}
-        <button
-          onClick={addItem}
-          className="absolute top-5 left-5 bg-blue-500 text-white px-4 py-2 rounded"
-        >
-          Add Item
-        </button>
+        
         {activeItem && (
           <div
             className="absolute flex flex-col items-center justify-center text-center bg-black text-white border border-black p-4 rounded"
             style={{
-              top: windowWidth < 768 ? '50%' : `${activeItem.y}px`,
-              left: windowWidth < 768 ? '50%' : `${activeItem.x}px`,
-              transform: windowWidth < 768 ? 'translate(-50%, -50%)' : 'none',
+              top: screenSize.width < 768 ? '50%' : `${activeItem.y}px`,
+              left: screenSize.width < 768 ? '50%' : `${activeItem.x}px`,
+              transform: screenSize.width < 768 ? 'translate(-50%, -50%)' : 'none',
             }}
           >
             <h3>{activeItem.title}</h3>
-            <p>Additional info about {activeItem.title}</p>
-            <a
-              href={activeItem.link}
-              title={activeItem.title}
-              className=""
-            >Visit</a>
-            {windowWidth < 768 && (
+            {/* <p>Additional info about {activeItem.title}</p> */}
+            <a href={activeItem.link} title={activeItem.title} className="text-blue-500">
+              Visit
+            </a>
+            {screenSize.width < 768 && (
               <button
                 onClick={handleClose}
-                className="mt-2 bg-red-500 text-white px-4 py-2 rounded"
+                className="mt-2 bg-red-500  px-4 py-2 rounded"
               >
                 Close
               </button>
@@ -196,11 +187,3 @@ const MovingOrbitWithFixedPosition: React.FC<MovingOrbitWithFixedPositionProps> 
 };
 
 export default MovingOrbitWithFixedPosition;
-
-
-// Prompt message
-// Ok one more thing before we conclude this, when each item is hovered on can it bring up a toolbox
-// for desktop: the toolbox should only stay when the specific item is hovered on but for mobile the toolbox should show at the center when the specific item is clicked but with a close button so that it can be closed
-
-// overall tool box must not leave screen 
-
