@@ -1,136 +1,45 @@
 'use client'
+import HistoryTimeline from "@/components/HIstoryTimeline";
 import TimelineComponent, { TimeLineData } from "@/components/TimelineComponent";
 import { title } from "process";
 
 const HomePage = () => {
-    const timelineData: TimeLineData[] = [
+    const processSteps = [
         {
-            year: "1881",
-            highlights: [
-                {
-                    title: "House Fellowship",
-                    description: "He was born in 1881 (probably in the spring) in Salonica...",
-                }
-            ],
-            
-            imgSrc: "http://i.cdn.ensonhaber.com/resimler/diger/ataturk_3473.jpg"
+            date: "1-6 May, 2021",
+            title: "Registration",
+            description: "Pick your favourite event(s) and register in that event by filling the form corresponding to that event. Its that easy :)",
         },
         {
-            year: "1893",
-            highlights: [
-                {
-                    title: "House Fellowship",
-                    description: "He was born in 1881 (probably in the spring) in Salonica...",
-                }
-            ],
-            imgSrc: "http://gazetemanifesto.com/wp-content/uploads/2015/11/mustafa-kemal.jpg"
+            date: "6-9 May, 2021",
+            title: "Participation",
+            description: "Participate online. The links for your registered events will be sent to you via email and whatsapp groups. Use those links and show your talent.",
+        }, {
+            date: "6-9 May, 2021",
+            title: "Participation",
+            description: "Participate online. The links for your registered events will be sent to you via email and whatsapp groups. Use those links and show your talent.",
         },
         {
-            year: "1905",
-            highlights: [
-                {
-                    title: "House Fellowship",
-                    description: "He was born in 1881 (probably in the spring) in Salonica...",
-                }
-            ],
-            imgSrc: "http://www.volpeypir.com/upload/3732.jpg"
+            date: "10 May, 2021",
+            title: "Result Declaration",
+            description: "The ultimate genius will be revealed by our judging panel on 10th May, 2021 and the results will be announced on the whatsapp groups and will be mailed to you.",
         },
         {
-            year: "1908",
-            highlights: [
-                {
-                    title: "House Fellowship",
-                    description: "He was born in 1881 (probably in the spring) in Salonica...",
-                }
-            ],
-            imgSrc: "http://cdn.yemek.com/uploads/2014/11/ataturk-10-kasim.jpg"
-        },
-        {
-            year: "1915",
-            highlights: [
-                {
-                    title: "House Fellowship",
-                    description: "He was born in 1881 (probably in the spring) in Salonica...",
-                }
-            ],
-            imgSrc: "http://ataturk.istanbul.gov.tr/GalleryLibrary/12.jpg"
-        },
-        {
-            year: "1916",
-            highlights: [
-                {
-                    title: "House Fellowship",
-                    description: "He was born in 1881 (probably in the spring) in Salonica...",
-                }
-            ],
-            imgSrc: "http://blog.istanbul1881.com/wp-content/uploads/2016/08/atat%C3%BCrk-%C3%BCn-inan%C4%B1lmaz-karizmatik-fotograf%C4%B1_861050.jpg"
-        },
-        {
-            year: "1919",
-            highlights: [
-                {
-                    title: "House Fellowship",
-                    description: "He was born in 1881 (probably in the spring) in Salonica...",
-                }
-            ],
-            imgSrc: "http://manisanokta.com/wp-content/uploads/2014/07/ataturk-20.jpg"
-        },
-        {
-            year: "1920",
-            highlights: [
-                {
-                    title: "House Fellowship",
-                    description: "He was born in 1881 (probably in the spring) in Salonica...",
-                }
-            ],
-            imgSrc: "http://www.volpeypir.com/upload/3732.jpg"
-        },
-        {
-            year: "1922",
-            highlights: [
-                {
-                    title: "House Fellowship",
-                    description: "He was born in 1881 (probably in the spring) in Salonica...",
-                }
-            ],
-            imgSrc: "https://turkcetarih.com/wp-content/uploads/2015/05/Atat%C3%BCrkveCumhuriyet.jpg"
-        },
-        {
-            year: "1923",
-            highlights: [
-                {
-                    title: "House Fellowship",
-                    description: "He was born in 1881 (probably in the spring) in Salonica...",
-                }
-            ],
-            imgSrc: "https://pbs.twimg.com/media/Cw69H8pXUAEaSqa.jpg"
-        },
-        {
-            year: "1934",
-            highlights: [
-                {
-                    title: "House Fellowship",
-                    description: "He was born in 1881 (probably in the spring) in Salonica...",
-                }
-            ],
-            imgSrc: "http://www.bik.gov.tr/wp-content/uploads/2016/11/20161110_2_20037273_15856882.jpg?fit=1024%2C863"
-        },
-        {
-            year: "1938",
-            highlights: [
-                {
-                    title: "House Fellowship",
-                    description: "He was born in 1881 (probably in the spring) in Salonica...",
-                }
-            ],
-            imgSrc: "http://www.bik.gov.tr/wp-content/uploads/2016/11/20161110_2_20037273_15856882.jpg?fit=1024%2C863"
+            date: "12 May, 2021",
+            title: "Prize Distribution",
+            description: "The winners will be contacted by our team for their addresses and the winning goodies will be sent at their addresses.",
         }
     ];
-  return (
-    <div className="px-5 py-5">
-      {/* <TimelineComponent timelineData={timelineData} backgroundImage="llld" /> */}
-    </div>
-  );
+
+    return (
+        <div className="px-5 py-5">
+            <HistoryTimeline steps={processSteps} />
+            {/* <TimelineComponent timelineData={timelineData} backgroundImage="llld" /> */}
+        </div>
+    );
 };
+
+// lazy loading ... 
+// add search or filter form where explore is
 
 export default HomePage;
